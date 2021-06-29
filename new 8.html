@@ -1,0 +1,13 @@
+// Calculate the total distance travelled
+total_km = 0;
+ 
+for(i = 0; i < data.length; i++){
+     
+    if(i == (data.length - 1)){
+        break;
+    }
+     
+    total_km += gps_distance(data[i].coords.latitude, data[i].coords.longitude, data[i+1].coords.latitude, data[i+1].coords.longitude);
+}
+ 
+total_km_rounded = total_km.toFixed(2);  
